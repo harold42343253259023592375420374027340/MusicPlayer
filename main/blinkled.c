@@ -1,20 +1,31 @@
 #include <stdio.h>
 #include <string.h>
+
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
+#include "freertos/queue.h"
+
 #include "esp_intr_alloc.h"
 #include "esp_log.h"
-#include "freertos/queue.h"
+#include "esp_check.h"
+
 #include "esp_vfs_fat.h"
+
 #include "driver/gpio.h"
 #include "driver/spi_common.h"
 #include "driver/sdspi_host.h"
+
+#include "driver/i2c_master.h"
+
+#include "sdkconfig.h"
+
 #include "sdmmc_cmd.h"
 #include "wav.h"
-#include "driver/dac.h"
 
 #define MAX_FILES 2048
 #define MAX_SONGS MAX_FILES
+
+
 #define PIN_NUM_CS   GPIO_NUM_10
 #define PIN_NUM_MOSI GPIO_NUM_11
 #define PIN_NUM_CLK  GPIO_NUM_12
@@ -22,10 +33,18 @@
 #define UPBUTTON GPIO_NUM_43
 #define DOWNBUTTON GPIO_NUM_45
 #define PLAYBUTTON GPIO_NUM_38
-#define AUX GPIO_NUM_47
+#define AUX GPIO_NUM_39
 #define VOLUME GPIO_NUM_21
+#define SCL GPIO_NUM_17
+#define SDA GPIO_NUM_18
 
-static uint8_t volume = 50;
+#define MCP4725_ADDR 0x60
+#define MCP4725_GENERAL_CALL_ADDR   0x00
+#define MCP4725_GENERAL_CALL_RESET  0x06
+#define MCP4725_GENERAL_CALL_WAKE   0x09
+
+
+static int volume = 50;
 static const char* TAG = "Music Player";
 static int songLocation = 0;
 static uint8_t isPlaying = 0;
@@ -35,6 +54,8 @@ static FIL* music_ptr;
 static WAVHeader wav_header;
 static unsigned int bytes_read;
 static uint8_t audio_buffer[512];
+
+
 
 uint8_t play_music(void) {
     f_read(music_ptr, &wav_header.riff, sizeof(char[4]), &bytes_read); // check if RIFF
@@ -103,28 +124,27 @@ uint8_t play_music(void) {
         return 1;        
     }
 
+
     uint32_t audio_sample_rate = wav_header.sample_rate;
     uint32_t audio_data_size = wav_header.subchunk2_size;
     uint32_t total_samples = audio_data_size / (wav_header.bits_per_sample / 8);
     uint32_t bytes_to_read = audio_data_size;
-    gpio_set_direction(AUX,GPIO_MODE_OUTPUT);
-    
+
+
     while (bytes_to_read > 0) {
         uint32_t bytes_read_this_time = (bytes_to_read > sizeof(audio_buffer)) ? sizeof(audio_buffer) : bytes_to_read;
         
         f_read(music_ptr, audio_buffer, bytes_read_this_time, &bytes_read);
         
         for (uint32_t i = 0; i < bytes_read_this_time; i++) {
-            uint8_t audio_sample = audio_buffer[i];
-            gpio_set_level(AUX,audio_sample * VOLUME);
-            
+
             vTaskDelay(pdMS_TO_TICKS(1000 / audio_sample_rate));
         }
-
         bytes_to_read -= bytes_read_this_time;
     }
     return 0;
 }
+
 
 void up_button(void) {
     f_close(music_ptr);
