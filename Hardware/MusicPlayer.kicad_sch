@@ -1090,6 +1090,170 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Device:R_Potentiometer"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "RV"
+				(at -4.445 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R_Potentiometer"
+				(at -2.54 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Potentiometer"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "resistor variable"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Potentiometer*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "R_Potentiometer_0_1"
+				(rectangle
+					(start 1.016 2.54)
+					(end -1.016 -2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.143 0) (xy 2.286 0.508) (xy 2.286 -0.508) (xy 1.143 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 0) (xy 1.524 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_Potentiometer_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 1.27)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Diode:1SS355VM"
 			(pin_numbers
 				(hide yes)
@@ -4337,7 +4501,7 @@
 		(uuid "200cbcea-53bd-497e-b813-d82a9b353774")
 	)
 	(junction
-		(at 128.27 57.15)
+		(at 128.27 49.53)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "21929b20-60e9-4f71-92b6-225500470004")
@@ -4355,7 +4519,7 @@
 		(uuid "26788ecc-6d12-4ebb-b4b2-4c01bd03e400")
 	)
 	(junction
-		(at 115.57 57.15)
+		(at 115.57 49.53)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2f78a7e5-c354-4a17-8e66-93c193148e70")
@@ -4403,13 +4567,13 @@
 		(uuid "67ecd86c-ca3b-4edf-9782-0dab0b11b4b7")
 	)
 	(junction
-		(at 115.57 34.29)
+		(at 115.57 26.67)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "68502b57-e0ae-4f9a-8ee3-2c272ad99863")
 	)
 	(junction
-		(at 128.27 41.91)
+		(at 128.27 34.29)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6954fafd-3bb5-4ca0-bdcb-cbf90c2d6252")
@@ -4419,12 +4583,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "780741fd-8964-4835-8ac5-c814ff7f7427")
-	)
-	(junction
-		(at 115.57 26.67)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "78103619-1416-454b-9f37-d1e467902d35")
 	)
 	(junction
 		(at 128.27 19.05)
@@ -4445,12 +4603,6 @@
 		(uuid "8660ddaa-66a4-4d7c-9140-c94f5f67cd4b")
 	)
 	(junction
-		(at 128.27 26.67)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "8a5853f4-fbe0-4941-aaf4-7d94ab3ce99c")
-	)
-	(junction
 		(at 63.5 41.91)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4469,7 +4621,7 @@
 		(uuid "95433302-7b46-4a1a-a5bf-b0aa7f3976d7")
 	)
 	(junction
-		(at 115.57 41.91)
+		(at 115.57 34.29)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9591ebc4-a378-49ac-b229-13a65e6f3d6a")
@@ -4499,10 +4651,16 @@
 		(uuid "aa12c4bb-954e-4790-b71e-47da6db533f8")
 	)
 	(junction
-		(at 128.27 49.53)
+		(at 128.27 41.91)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "aaaf97cf-d550-4f32-bb6f-d8024b7bfce4")
+	)
+	(junction
+		(at 205.74 48.26)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ab028edf-99a1-4137-90d1-acd1a60cbc60")
 	)
 	(junction
 		(at 205.74 157.48)
@@ -4517,7 +4675,7 @@
 		(uuid "b017ea24-9023-4ee7-8e2f-0826fd5ee080")
 	)
 	(junction
-		(at 128.27 34.29)
+		(at 128.27 26.67)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c3f67643-ca12-49b9-9b56-ea2e439e06df")
@@ -4541,7 +4699,7 @@
 		(uuid "dae170d0-3f90-4d16-b0e7-583f4f375cb2")
 	)
 	(junction
-		(at 115.57 49.53)
+		(at 115.57 41.91)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "dd96479e-c29d-4669-94da-44bba7baa05d")
@@ -4594,7 +4752,7 @@
 	)
 	(wire
 		(pts
-			(xy 128.27 49.53) (xy 140.97 49.53)
+			(xy 128.27 41.91) (xy 140.97 41.91)
 		)
 		(stroke
 			(width 0)
@@ -4631,16 +4789,6 @@
 			(type default)
 		)
 		(uuid "04a75990-2b67-4eb3-8cd7-3d518ca4a68c")
-	)
-	(wire
-		(pts
-			(xy 111.76 26.67) (xy 115.57 26.67)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "06555b46-ce71-48ea-8da3-a846697e732f")
 	)
 	(wire
 		(pts
@@ -4694,7 +4842,7 @@
 	)
 	(wire
 		(pts
-			(xy 128.27 57.15) (xy 128.27 59.69)
+			(xy 128.27 49.53) (xy 128.27 52.07)
 		)
 		(stroke
 			(width 0)
@@ -4714,7 +4862,7 @@
 	)
 	(wire
 		(pts
-			(xy 128.27 49.53) (xy 128.27 52.07)
+			(xy 128.27 41.91) (xy 128.27 44.45)
 		)
 		(stroke
 			(width 0)
@@ -4801,6 +4949,16 @@
 			(type default)
 		)
 		(uuid "335e6f82-41f8-499b-9125-f2461a81befb")
+	)
+	(wire
+		(pts
+			(xy 220.98 82.55) (xy 226.06 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "33fee73b-c93a-4f0a-91b0-f66d307cd5fe")
 	)
 	(wire
 		(pts
@@ -4894,7 +5052,7 @@
 	)
 	(wire
 		(pts
-			(xy 115.57 31.75) (xy 115.57 34.29)
+			(xy 115.57 24.13) (xy 115.57 26.67)
 		)
 		(stroke
 			(width 0)
@@ -4944,7 +5102,7 @@
 	)
 	(wire
 		(pts
-			(xy 128.27 34.29) (xy 140.97 34.29)
+			(xy 128.27 26.67) (xy 140.97 26.67)
 		)
 		(stroke
 			(width 0)
@@ -4974,7 +5132,7 @@
 	)
 	(wire
 		(pts
-			(xy 111.76 57.15) (xy 115.57 57.15)
+			(xy 111.76 49.53) (xy 115.57 49.53)
 		)
 		(stroke
 			(width 0)
@@ -5034,7 +5192,7 @@
 	)
 	(wire
 		(pts
-			(xy 111.76 34.29) (xy 115.57 34.29)
+			(xy 111.76 26.67) (xy 115.57 26.67)
 		)
 		(stroke
 			(width 0)
@@ -5074,7 +5232,7 @@
 	)
 	(wire
 		(pts
-			(xy 115.57 46.99) (xy 115.57 49.53)
+			(xy 115.57 39.37) (xy 115.57 41.91)
 		)
 		(stroke
 			(width 0)
@@ -5104,16 +5262,6 @@
 	)
 	(wire
 		(pts
-			(xy 128.27 26.67) (xy 128.27 29.21)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "640de909-e683-459b-8197-509f313f6152")
-	)
-	(wire
-		(pts
 			(xy 124.46 170.18) (xy 124.46 157.48)
 		)
 		(stroke
@@ -5131,16 +5279,6 @@
 			(type default)
 		)
 		(uuid "64dcf5b8-9c44-49f6-930c-474d72ed1a7b")
-	)
-	(wire
-		(pts
-			(xy 115.57 26.67) (xy 115.57 29.21)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6a5c913d-56da-4d3e-a43c-02ac0b11199d")
 	)
 	(wire
 		(pts
@@ -5201,6 +5339,16 @@
 			(type default)
 		)
 		(uuid "77238906-9d31-4ba0-a4dd-13e982d81c75")
+	)
+	(wire
+		(pts
+			(xy 226.06 27.94) (xy 226.06 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "799d956b-7237-4e34-b40a-421cc38bab82")
 	)
 	(wire
 		(pts
@@ -5284,7 +5432,7 @@
 	)
 	(wire
 		(pts
-			(xy 128.27 31.75) (xy 128.27 34.29)
+			(xy 128.27 24.13) (xy 128.27 26.67)
 		)
 		(stroke
 			(width 0)
@@ -5301,16 +5449,6 @@
 			(type default)
 		)
 		(uuid "86d15540-1c04-4e65-8951-4a5336c14d2e")
-	)
-	(wire
-		(pts
-			(xy 115.57 24.13) (xy 115.57 26.67)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8829a06f-2a3f-48c8-a5ac-f2416571805c")
 	)
 	(wire
 		(pts
@@ -5394,7 +5532,7 @@
 	)
 	(wire
 		(pts
-			(xy 128.27 39.37) (xy 128.27 41.91)
+			(xy 128.27 31.75) (xy 128.27 34.29)
 		)
 		(stroke
 			(width 0)
@@ -5411,16 +5549,6 @@
 			(type default)
 		)
 		(uuid "94df7f2e-3b3c-4bd8-83e3-5d989a6ac48a")
-	)
-	(wire
-		(pts
-			(xy 128.27 26.67) (xy 140.97 26.67)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "95286bc8-76ab-41d8-8714-f00b0b31d548")
 	)
 	(wire
 		(pts
@@ -5514,16 +5642,6 @@
 	)
 	(wire
 		(pts
-			(xy 128.27 24.13) (xy 128.27 26.67)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9f9edf2c-8ad6-4cd5-bae5-7240fc3f302b")
-	)
-	(wire
-		(pts
 			(xy 236.22 106.68) (xy 236.22 104.14)
 		)
 		(stroke
@@ -5534,7 +5652,17 @@
 	)
 	(wire
 		(pts
-			(xy 128.27 54.61) (xy 128.27 57.15)
+			(xy 194.31 27.94) (xy 226.06 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a271d7ee-db53-4612-a6b8-225cffbb16dc")
+	)
+	(wire
+		(pts
+			(xy 128.27 46.99) (xy 128.27 49.53)
 		)
 		(stroke
 			(width 0)
@@ -5544,7 +5672,7 @@
 	)
 	(wire
 		(pts
-			(xy 115.57 54.61) (xy 115.57 57.15)
+			(xy 115.57 46.99) (xy 115.57 49.53)
 		)
 		(stroke
 			(width 0)
@@ -5564,7 +5692,17 @@
 	)
 	(wire
 		(pts
-			(xy 115.57 57.15) (xy 115.57 59.69)
+			(xy 205.74 43.18) (xy 205.74 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ab1104af-ba24-4a5e-82b2-b06d195b0339")
+	)
+	(wire
+		(pts
+			(xy 115.57 49.53) (xy 115.57 52.07)
 		)
 		(stroke
 			(width 0)
@@ -5604,7 +5742,7 @@
 	)
 	(wire
 		(pts
-			(xy 128.27 57.15) (xy 140.97 57.15)
+			(xy 128.27 49.53) (xy 140.97 49.53)
 		)
 		(stroke
 			(width 0)
@@ -5624,7 +5762,7 @@
 	)
 	(wire
 		(pts
-			(xy 115.57 41.91) (xy 115.57 44.45)
+			(xy 115.57 34.29) (xy 115.57 36.83)
 		)
 		(stroke
 			(width 0)
@@ -5634,7 +5772,7 @@
 	)
 	(wire
 		(pts
-			(xy 128.27 46.99) (xy 128.27 49.53)
+			(xy 128.27 39.37) (xy 128.27 41.91)
 		)
 		(stroke
 			(width 0)
@@ -5654,7 +5792,7 @@
 	)
 	(wire
 		(pts
-			(xy 115.57 49.53) (xy 115.57 52.07)
+			(xy 115.57 41.91) (xy 115.57 44.45)
 		)
 		(stroke
 			(width 0)
@@ -5724,7 +5862,7 @@
 	)
 	(wire
 		(pts
-			(xy 111.76 49.53) (xy 115.57 49.53)
+			(xy 111.76 41.91) (xy 115.57 41.91)
 		)
 		(stroke
 			(width 0)
@@ -5814,7 +5952,7 @@
 	)
 	(wire
 		(pts
-			(xy 128.27 34.29) (xy 128.27 36.83)
+			(xy 128.27 26.67) (xy 128.27 29.21)
 		)
 		(stroke
 			(width 0)
@@ -5874,7 +6012,17 @@
 	)
 	(wire
 		(pts
-			(xy 115.57 34.29) (xy 115.57 36.83)
+			(xy 194.31 43.18) (xy 205.74 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d96a4db5-754c-48d9-ad7f-d587568c1181")
+	)
+	(wire
+		(pts
+			(xy 115.57 26.67) (xy 115.57 29.21)
 		)
 		(stroke
 			(width 0)
@@ -5894,7 +6042,7 @@
 	)
 	(wire
 		(pts
-			(xy 111.76 41.91) (xy 115.57 41.91)
+			(xy 111.76 34.29) (xy 115.57 34.29)
 		)
 		(stroke
 			(width 0)
@@ -5934,7 +6082,7 @@
 	)
 	(wire
 		(pts
-			(xy 128.27 41.91) (xy 140.97 41.91)
+			(xy 128.27 34.29) (xy 140.97 34.29)
 		)
 		(stroke
 			(width 0)
@@ -5964,7 +6112,7 @@
 	)
 	(wire
 		(pts
-			(xy 128.27 41.91) (xy 128.27 44.45)
+			(xy 128.27 34.29) (xy 128.27 36.83)
 		)
 		(stroke
 			(width 0)
@@ -5981,6 +6129,16 @@
 			(type default)
 		)
 		(uuid "f013aead-eb56-4dfc-85ab-cbeb921723b6")
+	)
+	(wire
+		(pts
+			(xy 194.31 35.56) (xy 194.31 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f3d989e5-2323-42ef-91b2-9f7bfe86691d")
 	)
 	(wire
 		(pts
@@ -6054,7 +6212,7 @@
 	)
 	(wire
 		(pts
-			(xy 115.57 39.37) (xy 115.57 41.91)
+			(xy 115.57 31.75) (xy 115.57 34.29)
 		)
 		(stroke
 			(width 0)
@@ -6216,28 +6374,6 @@
 			)
 		)
 	)
-	(global_label "PAUSE"
-		(shape input)
-		(at 140.97 26.67 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "46ffc7f9-871f-40c1-af31-e5c0d29ce251")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 148.7516 26.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "D2"
 		(shape input)
 		(at 190.5 82.55 180)
@@ -6284,7 +6420,7 @@
 	)
 	(global_label "VCC_3V3"
 		(shape input)
-		(at 111.76 49.53 180)
+		(at 111.76 41.91 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6294,7 +6430,7 @@
 		)
 		(uuid "4a3541f2-1e84-4bd7-bcfb-669271e375f7")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 101.8939 49.53 0)
+			(at 101.8939 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6322,28 +6458,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "PAUSE"
-		(shape input)
-		(at 220.98 95.25 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "5dfc6c6f-1491-4df0-b0be-15ee25c848a4")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 228.7616 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 				(hide yes)
 			)
 		)
@@ -6414,9 +6528,31 @@
 			)
 		)
 	)
+	(global_label "SDDET"
+		(shape input)
+		(at 190.5 74.93 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "7ec969dc-52ed-4184-838d-06dff42bf9dc")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 182.4008 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "BACK1"
 		(shape input)
-		(at 140.97 41.91 0)
+		(at 140.97 34.29 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6426,7 +6562,7 @@
 		)
 		(uuid "807e85d2-eae3-49ec-98bd-b9b008ffb2c1")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 149.0308 41.91 0)
+			(at 149.0308 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6471,28 +6607,6 @@
 		(uuid "828fcf34-194c-4991-b3ca-96984d0fc592")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 245.3763 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "VCC_3V3"
-		(shape input)
-		(at 111.76 26.67 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "82b2102b-eb47-41b7-ad0b-b35241177fde")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 101.8939 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6548,7 +6662,7 @@
 	)
 	(global_label "BACKS"
 		(shape input)
-		(at 140.97 49.53 0)
+		(at 140.97 41.91 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6558,7 +6672,7 @@
 		)
 		(uuid "9a576e39-a9d6-47d6-b15c-e352363990b8")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 149.1027 49.53 0)
+			(at 149.1027 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6570,7 +6684,7 @@
 	)
 	(global_label "VCC_3V3"
 		(shape input)
-		(at 111.76 34.29 180)
+		(at 111.76 26.67 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6580,7 +6694,7 @@
 		)
 		(uuid "9d4feda6-e9e7-471a-babf-1c2fe089cac3")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 101.8939 34.29 0)
+			(at 101.8939 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6658,7 +6772,7 @@
 	)
 	(global_label "VCC_3V3"
 		(shape input)
-		(at 111.76 41.91 180)
+		(at 111.76 34.29 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6668,7 +6782,7 @@
 		)
 		(uuid "a314a6ab-b7bd-4f27-a14d-6c46578912f9")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 101.8939 41.91 0)
+			(at 101.8939 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6702,7 +6816,7 @@
 	)
 	(global_label "NEXTS"
 		(shape input)
-		(at 140.97 57.15 0)
+		(at 140.97 49.53 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6712,7 +6826,7 @@
 		)
 		(uuid "a48e0e9e-76c9-47c0-8109-c9fe9efd1bee")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 148.862 57.15 0)
+			(at 148.862 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7076,7 +7190,7 @@
 	)
 	(global_label "VCC_3V3"
 		(shape input)
-		(at 111.76 57.15 180)
+		(at 111.76 49.53 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7086,7 +7200,7 @@
 		)
 		(uuid "da7c7c8e-49b6-4964-a6e4-3451a91fea3c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 101.8939 57.15 0)
+			(at 101.8939 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7230,7 +7344,7 @@
 	)
 	(global_label "FORWARD1"
 		(shape input)
-		(at 140.97 34.29 0)
+		(at 140.97 26.67 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7240,7 +7354,7 @@
 		)
 		(uuid "e647fccb-4934-4e1e-9f22-44d8fd0d3481")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 152.83 34.29 0)
+			(at 152.83 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7263,6 +7377,28 @@
 		(uuid "e67b785b-ff43-4ea0-9ce1-87b922bba300")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 185.6491 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "SDDET"
+		(shape input)
+		(at 228.6 128.27 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "e770d4ec-b07f-4732-8eb7-db9a6c51815a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 220.5008 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7772,7 +7908,7 @@
 	)
 	(symbol
 		(lib_id "FSM8JH:FSM8JH")
-		(at 121.92 57.15 0)
+		(at 121.92 49.53 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7781,7 +7917,7 @@
 		(fields_autoplaced yes)
 		(uuid "18c253ac-5eda-409c-b7f8-e71635dcc143")
 		(property "Reference" "S6"
-			(at 121.92 48.26 0)
+			(at 121.92 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7789,7 +7925,7 @@
 			)
 		)
 		(property "Value" "FSM8JH"
-			(at 121.92 50.8 0)
+			(at 121.92 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7797,7 +7933,7 @@
 			)
 		)
 		(property "Footprint" "FSM8JH:SW_FSM8JH"
-			(at 121.92 57.15 0)
+			(at 121.92 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7807,7 +7943,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 121.92 57.15 0)
+			(at 121.92 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7816,7 +7952,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 121.92 57.15 0)
+			(at 121.92 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7825,7 +7961,7 @@
 			)
 		)
 		(property "MF" "TE Connectivity"
-			(at 121.92 57.15 0)
+			(at 121.92 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7835,7 +7971,7 @@
 			)
 		)
 		(property "Description_1" "Switch,Pushbutton,Tactile,SPST,Thru Hole,Vertical,6MM,Black | TE Connectivity FSM8JH"
-			(at 121.92 57.15 0)
+			(at 121.92 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7845,7 +7981,7 @@
 			)
 		)
 		(property "Package" "None"
-			(at 121.92 57.15 0)
+			(at 121.92 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7855,7 +7991,7 @@
 			)
 		)
 		(property "Price" "None"
-			(at 121.92 57.15 0)
+			(at 121.92 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7865,7 +8001,7 @@
 			)
 		)
 		(property "Check_prices" "https://www.snapeda.com/parts/FSM8JH/TE+Connectivity+ALCOSWITCH+Switches/view-part/?ref=eda"
-			(at 121.92 57.15 0)
+			(at 121.92 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7875,7 +8011,7 @@
 			)
 		)
 		(property "STANDARD" "MANUFACTURER RECOMMENDATIONS"
-			(at 121.92 57.15 0)
+			(at 121.92 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7885,7 +8021,7 @@
 			)
 		)
 		(property "PARTREV" "C10"
-			(at 121.92 57.15 0)
+			(at 121.92 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7895,7 +8031,7 @@
 			)
 		)
 		(property "SnapEDA_Link" "https://www.snapeda.com/parts/FSM8JH/TE+Connectivity+ALCOSWITCH+Switches/view-part/?ref=snap"
-			(at 121.92 57.15 0)
+			(at 121.92 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7905,7 +8041,7 @@
 			)
 		)
 		(property "MP" "FSM8JH"
-			(at 121.92 57.15 0)
+			(at 121.92 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7915,7 +8051,7 @@
 			)
 		)
 		(property "Availability" "In Stock"
-			(at 121.92 57.15 0)
+			(at 121.92 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7925,7 +8061,7 @@
 			)
 		)
 		(property "MANUFACTURER" "TE CONNECTIVITY"
-			(at 121.92 57.15 0)
+			(at 121.92 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7957,7 +8093,7 @@
 	)
 	(symbol
 		(lib_id "FSM8JH:FSM8JH")
-		(at 121.92 41.91 0)
+		(at 121.92 34.29 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7966,7 +8102,7 @@
 		(fields_autoplaced yes)
 		(uuid "1f8ff9df-3d7f-4dc3-9d75-ea1b68567973")
 		(property "Reference" "S4"
-			(at 121.92 33.02 0)
+			(at 121.92 25.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7974,7 +8110,7 @@
 			)
 		)
 		(property "Value" "FSM8JH"
-			(at 121.92 35.56 0)
+			(at 121.92 27.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7982,7 +8118,7 @@
 			)
 		)
 		(property "Footprint" "FSM8JH:SW_FSM8JH"
-			(at 121.92 41.91 0)
+			(at 121.92 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7992,7 +8128,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 121.92 41.91 0)
+			(at 121.92 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8001,7 +8137,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 121.92 41.91 0)
+			(at 121.92 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8010,7 +8146,7 @@
 			)
 		)
 		(property "MF" "TE Connectivity"
-			(at 121.92 41.91 0)
+			(at 121.92 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8020,7 +8156,7 @@
 			)
 		)
 		(property "Description_1" "Switch,Pushbutton,Tactile,SPST,Thru Hole,Vertical,6MM,Black | TE Connectivity FSM8JH"
-			(at 121.92 41.91 0)
+			(at 121.92 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8030,7 +8166,7 @@
 			)
 		)
 		(property "Package" "None"
-			(at 121.92 41.91 0)
+			(at 121.92 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8040,7 +8176,7 @@
 			)
 		)
 		(property "Price" "None"
-			(at 121.92 41.91 0)
+			(at 121.92 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8050,7 +8186,7 @@
 			)
 		)
 		(property "Check_prices" "https://www.snapeda.com/parts/FSM8JH/TE+Connectivity+ALCOSWITCH+Switches/view-part/?ref=eda"
-			(at 121.92 41.91 0)
+			(at 121.92 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8060,7 +8196,7 @@
 			)
 		)
 		(property "STANDARD" "MANUFACTURER RECOMMENDATIONS"
-			(at 121.92 41.91 0)
+			(at 121.92 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8070,7 +8206,7 @@
 			)
 		)
 		(property "PARTREV" "C10"
-			(at 121.92 41.91 0)
+			(at 121.92 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8080,7 +8216,7 @@
 			)
 		)
 		(property "SnapEDA_Link" "https://www.snapeda.com/parts/FSM8JH/TE+Connectivity+ALCOSWITCH+Switches/view-part/?ref=snap"
-			(at 121.92 41.91 0)
+			(at 121.92 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8090,7 +8226,7 @@
 			)
 		)
 		(property "MP" "FSM8JH"
-			(at 121.92 41.91 0)
+			(at 121.92 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8100,7 +8236,7 @@
 			)
 		)
 		(property "Availability" "In Stock"
-			(at 121.92 41.91 0)
+			(at 121.92 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8110,7 +8246,7 @@
 			)
 		)
 		(property "MANUFACTURER" "TE CONNECTIVITY"
-			(at 121.92 41.91 0)
+			(at 121.92 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9205,192 +9341,7 @@
 	)
 	(symbol
 		(lib_id "FSM8JH:FSM8JH")
-		(at 121.92 26.67 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "762ff3c9-d8fe-4c91-b684-81ec98102804")
-		(property "Reference" "S2"
-			(at 121.92 17.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "FSM8JH"
-			(at 121.92 20.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "FSM8JH:SW_FSM8JH"
-			(at 121.92 26.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 121.92 26.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 121.92 26.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "MF" "TE Connectivity"
-			(at 121.92 26.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "Description_1" "Switch,Pushbutton,Tactile,SPST,Thru Hole,Vertical,6MM,Black | TE Connectivity FSM8JH"
-			(at 121.92 26.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "Package" "None"
-			(at 121.92 26.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "Price" "None"
-			(at 121.92 26.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "Check_prices" "https://www.snapeda.com/parts/FSM8JH/TE+Connectivity+ALCOSWITCH+Switches/view-part/?ref=eda"
-			(at 121.92 26.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "STANDARD" "MANUFACTURER RECOMMENDATIONS"
-			(at 121.92 26.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "PARTREV" "C10"
-			(at 121.92 26.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "SnapEDA_Link" "https://www.snapeda.com/parts/FSM8JH/TE+Connectivity+ALCOSWITCH+Switches/view-part/?ref=snap"
-			(at 121.92 26.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "MP" "FSM8JH"
-			(at 121.92 26.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "Availability" "In Stock"
-			(at 121.92 26.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "MANUFACTURER" "TE CONNECTIVITY"
-			(at 121.92 26.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "df9de2fb-4e06-44d9-adda-e9906b433e30")
-		)
-		(pin "1"
-			(uuid "3930a5ee-1308-4625-a4f1-6c7d991e5773")
-		)
-		(pin "2"
-			(uuid "5d68b802-a597-4e29-ba23-6e17046df117")
-		)
-		(pin "4"
-			(uuid "847c6136-fe1f-4172-bf79-641f51266eed")
-		)
-		(instances
-			(project "MusicPlayer"
-				(path "/2b7a1a48-2553-49e3-90ba-0bcdb9a91407"
-					(reference "S2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "FSM8JH:FSM8JH")
-		(at 121.92 49.53 0)
+		(at 121.92 41.91 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9399,7 +9350,7 @@
 		(fields_autoplaced yes)
 		(uuid "8e52befd-f6e1-4f2a-b339-94da80dae291")
 		(property "Reference" "S5"
-			(at 121.92 40.64 0)
+			(at 121.92 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9407,7 +9358,7 @@
 			)
 		)
 		(property "Value" "FSM8JH"
-			(at 121.92 43.18 0)
+			(at 121.92 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9415,7 +9366,7 @@
 			)
 		)
 		(property "Footprint" "FSM8JH:SW_FSM8JH"
-			(at 121.92 49.53 0)
+			(at 121.92 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9425,7 +9376,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 121.92 49.53 0)
+			(at 121.92 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9434,7 +9385,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 121.92 49.53 0)
+			(at 121.92 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9443,7 +9394,7 @@
 			)
 		)
 		(property "MF" "TE Connectivity"
-			(at 121.92 49.53 0)
+			(at 121.92 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9453,7 +9404,7 @@
 			)
 		)
 		(property "Description_1" "Switch,Pushbutton,Tactile,SPST,Thru Hole,Vertical,6MM,Black | TE Connectivity FSM8JH"
-			(at 121.92 49.53 0)
+			(at 121.92 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9463,7 +9414,7 @@
 			)
 		)
 		(property "Package" "None"
-			(at 121.92 49.53 0)
+			(at 121.92 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9473,7 +9424,7 @@
 			)
 		)
 		(property "Price" "None"
-			(at 121.92 49.53 0)
+			(at 121.92 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9483,7 +9434,7 @@
 			)
 		)
 		(property "Check_prices" "https://www.snapeda.com/parts/FSM8JH/TE+Connectivity+ALCOSWITCH+Switches/view-part/?ref=eda"
-			(at 121.92 49.53 0)
+			(at 121.92 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9493,7 +9444,7 @@
 			)
 		)
 		(property "STANDARD" "MANUFACTURER RECOMMENDATIONS"
-			(at 121.92 49.53 0)
+			(at 121.92 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9503,7 +9454,7 @@
 			)
 		)
 		(property "PARTREV" "C10"
-			(at 121.92 49.53 0)
+			(at 121.92 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9513,7 +9464,7 @@
 			)
 		)
 		(property "SnapEDA_Link" "https://www.snapeda.com/parts/FSM8JH/TE+Connectivity+ALCOSWITCH+Switches/view-part/?ref=snap"
-			(at 121.92 49.53 0)
+			(at 121.92 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9523,7 +9474,7 @@
 			)
 		)
 		(property "MP" "FSM8JH"
-			(at 121.92 49.53 0)
+			(at 121.92 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9533,7 +9484,7 @@
 			)
 		)
 		(property "Availability" "In Stock"
-			(at 121.92 49.53 0)
+			(at 121.92 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9543,7 +9494,7 @@
 			)
 		)
 		(property "MANUFACTURER" "TE CONNECTIVITY"
-			(at 121.92 49.53 0)
+			(at 121.92 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9709,6 +9660,79 @@
 			(project ""
 				(path "/2b7a1a48-2553-49e3-90ba-0bcdb9a91407"
 					(reference "J2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Potentiometer")
+		(at 194.31 31.75 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9bc00260-80ba-4f2c-970d-d6d6f4d1ab5f")
+		(property "Reference" "RV1"
+			(at 196.85 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "R_Potentiometer"
+			(at 196.85 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Potentiometer_SMD:Potentiometer_Bourns_3314S_Horizontal"
+			(at 194.31 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 194.31 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Potentiometer"
+			(at 194.31 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "96ec31ce-67a2-408b-b235-087371ee1e0d")
+		)
+		(pin "3"
+			(uuid "d9b07fe2-1ebb-4fe6-9a9a-739b43505cf6")
+		)
+		(pin "2"
+			(uuid "a18533be-f1f0-4b06-baa5-11967f278d7c")
+		)
+		(instances
+			(project ""
+				(path "/2b7a1a48-2553-49e3-90ba-0bcdb9a91407"
+					(reference "RV1")
 					(unit 1)
 				)
 			)
@@ -10132,7 +10156,7 @@
 	)
 	(symbol
 		(lib_id "FSM8JH:FSM8JH")
-		(at 121.92 34.29 0)
+		(at 121.92 26.67 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10141,23 +10165,25 @@
 		(fields_autoplaced yes)
 		(uuid "c61d6d73-54ab-4ef2-b803-0878d55e03cd")
 		(property "Reference" "S3"
-			(at 121.92 25.4 0)
+			(at 121.92 17.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Value" "FSM8JH"
-			(at 121.92 27.94 0)
+			(at 121.92 20.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "FSM8JH:SW_FSM8JH"
-			(at 121.92 34.29 0)
+			(at 121.92 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10167,7 +10193,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 121.92 34.29 0)
+			(at 121.92 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10176,7 +10202,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 121.92 34.29 0)
+			(at 121.92 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10185,7 +10211,7 @@
 			)
 		)
 		(property "MF" "TE Connectivity"
-			(at 121.92 34.29 0)
+			(at 121.92 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10195,7 +10221,7 @@
 			)
 		)
 		(property "Description_1" "Switch,Pushbutton,Tactile,SPST,Thru Hole,Vertical,6MM,Black | TE Connectivity FSM8JH"
-			(at 121.92 34.29 0)
+			(at 121.92 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10205,7 +10231,7 @@
 			)
 		)
 		(property "Package" "None"
-			(at 121.92 34.29 0)
+			(at 121.92 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10215,7 +10241,7 @@
 			)
 		)
 		(property "Price" "None"
-			(at 121.92 34.29 0)
+			(at 121.92 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10225,7 +10251,7 @@
 			)
 		)
 		(property "Check_prices" "https://www.snapeda.com/parts/FSM8JH/TE+Connectivity+ALCOSWITCH+Switches/view-part/?ref=eda"
-			(at 121.92 34.29 0)
+			(at 121.92 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10235,7 +10261,7 @@
 			)
 		)
 		(property "STANDARD" "MANUFACTURER RECOMMENDATIONS"
-			(at 121.92 34.29 0)
+			(at 121.92 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10245,7 +10271,7 @@
 			)
 		)
 		(property "PARTREV" "C10"
-			(at 121.92 34.29 0)
+			(at 121.92 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10255,7 +10281,7 @@
 			)
 		)
 		(property "SnapEDA_Link" "https://www.snapeda.com/parts/FSM8JH/TE+Connectivity+ALCOSWITCH+Switches/view-part/?ref=snap"
-			(at 121.92 34.29 0)
+			(at 121.92 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10265,7 +10291,7 @@
 			)
 		)
 		(property "MP" "FSM8JH"
-			(at 121.92 34.29 0)
+			(at 121.92 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10275,7 +10301,7 @@
 			)
 		)
 		(property "Availability" "In Stock"
-			(at 121.92 34.29 0)
+			(at 121.92 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10285,7 +10311,7 @@
 			)
 		)
 		(property "MANUFACTURER" "TE CONNECTIVITY"
-			(at 121.92 34.29 0)
+			(at 121.92 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)

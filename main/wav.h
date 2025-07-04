@@ -4,7 +4,7 @@
 
 typedef struct {
     char     riff[4];         // "RIFF"
-    uint32_t chunk_size;      // File size - 8 bytes
+    uint32_t chunk_size;      
     char     wave[4];         // "WAVE"
 
     // fmt subchunk
