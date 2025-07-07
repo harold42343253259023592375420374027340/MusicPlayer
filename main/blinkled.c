@@ -23,7 +23,7 @@
 #include "sdmmc_cmd.h"
 #include "wav.h"
 
-#define MAX_FILES 2048
+#define MAX_FILES 4069
 #define MAX_SONGS MAX_FILES
 
 #define PIN_NUM_CS   GPIO_NUM_10
@@ -48,9 +48,12 @@ static FIL* music_ptr;
 static WAVHeader wav_header;
 static unsigned int bytes_read;
 static uint8_t audio_buffer[512];
+static char music_path[] = "/music/";
+
 
 uint8_t play_music(void) {
-    f_read(music_ptr, &wav_header.riff, sizeof(char[4]), &bytes_read); // check if RIFF
+
+    f_read(music_ptr, &wav_header.riff, sizeof(char[4]), &bytes_read);
     if (strcmp(wav_header.riff,"RIFF") != 0) {
         ESP_LOGE(TAG,"Incorrect file format");
         return 1;
@@ -170,16 +173,28 @@ void down_button(void) {
 }
 
 void play_button(void) {
+    
+    char fpath[64];
+    char temp_path[64];
+
     isPlaying = !isPlaying;
 
     f_readdir(&music_dir,&music_file_info);
 
     ESP_LOGE(TAG, "Failed to read 'music' directory");
 
-    ESP_LOGI(TAG,"SONG NAME: %s", music_file_info.fname);
+    ESP_LOGI(TAG,"Song name: %s", music_file_info.fname);
+    
+    strcpy(fpath, music_file_info.fname);
+    
+    strcat(temp_path, music_path);
+    strcat(temp_path, fpath);
+    strcpy(fpath, temp_path);
 
-    if (isPlaying == 1) {
-        f_open(music_ptr,"/music/",'r');
+    ESP_LOGI(TAG, "Path to music: %s", fpath);
+
+    if (isPlaying == true) {
+        f_open(music_ptr, fpath,'r');
         if (play_music() != 0) {
             ESP_LOGE(TAG, "music failed to play");
         }
@@ -247,6 +262,7 @@ void app_main(void) {
     gpio_isr_handler_add(DOWNBUTTON, down_button_isr_handler, NULL);
     gpio_isr_handler_add(PLAYBUTTON, play_button_isr_handler, NULL);
     gpio_set_direction(VOLUME, GPIO_MODE_INPUT);
+    
     f_opendir(&music_dir,"/music");
 
     while (1) {
