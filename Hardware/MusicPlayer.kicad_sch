@@ -105,196 +105,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Analog_DAC:MCP4725xxx-xCH"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "U"
-				(at -6.35 6.35 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "MCP4725xxx-xCH"
-				(at 8.89 6.35 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "Package_TO_SOT_SMD:SOT-23-6"
-				(at 0 -6.35 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/22039d.pdf"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "12-bit Digital-to-Analog Converter, integrated EEPROM, I2C interface, SOT-23-6"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "dac twi"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "SOT?23*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "MCP4725xxx-xCH_0_1"
-				(rectangle
-					(start -7.62 5.08)
-					(end 7.62 -5.08)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-			)
-			(symbol "MCP4725xxx-xCH_1_1"
-				(pin input line
-					(at -10.16 2.54 0)
-					(length 2.54)
-					(name "SCL"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -10.16 0 0)
-					(length 2.54)
-					(name "SDA"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -10.16 -2.54 0)
-					(length 2.54)
-					(name "A0"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 0 7.62 270)
-					(length 2.54)
-					(name "VDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 0 -7.62 90)
-					(length 2.54)
-					(name "VSS"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 10.16 0 180)
-					(length 2.54)
-					(name "VOUT"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Connector:USB_B_Micro"
 			(pin_names
 				(offset 1.016)
@@ -4679,12 +4489,6 @@
 		(uuid "15447516-cd8c-46b9-90ed-1adcc7b177d5")
 	)
 	(junction
-		(at 260.35 87.63)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "1b96a352-0a65-4a40-8a8c-6c13127625af")
-	)
-	(junction
 		(at 25.4 66.04)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5002,16 +4806,6 @@
 	)
 	(wire
 		(pts
-			(xy 247.65 96.52) (xy 247.65 95.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0b44f967-7be5-4bb4-b6e8-b6e50444706f")
-	)
-	(wire
-		(pts
 			(xy 33.02 34.29) (xy 39.37 34.29)
 		)
 		(stroke
@@ -5069,16 +4863,6 @@
 			(type default)
 		)
 		(uuid "2780a04e-5dde-4d14-a36c-7374bab7ffc4")
-	)
-	(wire
-		(pts
-			(xy 236.22 90.17) (xy 237.49 90.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "28f75c49-9625-4f92-89e9-1bb775fe2ae4")
 	)
 	(wire
 		(pts
@@ -5209,16 +4993,6 @@
 			(type default)
 		)
 		(uuid "396d4a52-5d74-41ee-b9bc-ac64918b7a3e")
-	)
-	(wire
-		(pts
-			(xy 232.41 87.63) (xy 237.49 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3b183023-1c74-4015-a513-d3723a9da1a2")
 	)
 	(wire
 		(pts
@@ -5452,16 +5226,6 @@
 	)
 	(wire
 		(pts
-			(xy 257.81 87.63) (xy 260.35 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "60e0bb0d-ff49-4fc8-bbb5-5817aa160c2b")
-	)
-	(wire
-		(pts
 			(xy 36.83 137.16) (xy 29.21 137.16)
 		)
 		(stroke
@@ -5479,16 +5243,6 @@
 			(type default)
 		)
 		(uuid "61c9106d-fb23-49ad-83f9-869538857e29")
-	)
-	(wire
-		(pts
-			(xy 231.14 85.09) (xy 237.49 85.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "620210b4-4b0a-4370-b3e7-26a0c898440a")
 	)
 	(wire
 		(pts
@@ -5662,7 +5416,7 @@
 	)
 	(wire
 		(pts
-			(xy 260.35 86.36) (xy 260.35 87.63)
+			(xy 260.35 86.36) (xy 260.35 88.9)
 		)
 		(stroke
 			(width 0)
@@ -5682,16 +5436,6 @@
 	)
 	(wire
 		(pts
-			(xy 260.35 87.63) (xy 260.35 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "863b2b34-9e56-4fa7-bfe1-1ad7c97f592b")
-	)
-	(wire
-		(pts
 			(xy 210.82 48.26) (xy 205.74 48.26)
 		)
 		(stroke
@@ -5699,16 +5443,6 @@
 			(type default)
 		)
 		(uuid "86d15540-1c04-4e65-8951-4a5336c14d2e")
-	)
-	(wire
-		(pts
-			(xy 236.22 96.52) (xy 247.65 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "87986e11-ea19-455a-bfd4-8f3436d4ecd4")
 	)
 	(wire
 		(pts
@@ -5999,16 +5733,6 @@
 			(type default)
 		)
 		(uuid "aed83e67-204e-4d4b-aafd-cdfb997254b6")
-	)
-	(wire
-		(pts
-			(xy 247.65 77.47) (xy 247.65 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "aef71ec5-b811-427f-83a0-a41f7567fa52")
 	)
 	(wire
 		(pts
@@ -6412,16 +6136,6 @@
 	)
 	(wire
 		(pts
-			(xy 236.22 90.17) (xy 236.22 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f8605120-7181-4a6d-bba5-cb326b3a6698")
-	)
-	(wire
-		(pts
 			(xy 128.27 19.05) (xy 128.27 21.59)
 		)
 		(stroke
@@ -6720,28 +6434,6 @@
 			)
 		)
 	)
-	(global_label "GND"
-		(shape input)
-		(at 247.65 96.52 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "507ff18f-6ce1-4fbe-a408-9bcb7f9ed97e")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 254.2343 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "MISO"
 		(shape input)
 		(at 190.5 105.41 180)
@@ -6760,28 +6452,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "VCC_3V3"
-		(shape input)
-		(at 247.65 77.47 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "5c26dcca-0262-4afd-a0e9-283432106c10")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 257.5161 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 				(hide yes)
 			)
 		)
@@ -8225,86 +7895,6 @@
 			(project ""
 				(path "/2b7a1a48-2553-49e3-90ba-0bcdb9a91407"
 					(reference "SW1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Analog_DAC:MCP4725xxx-xCH")
-		(at 247.65 87.63 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "0ce9f489-4af6-4b30-ad60-5be35b7e8820")
-		(property "Reference" "U6"
-			(at 262.89 80.9215 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "MCP4725xxx-xCH"
-			(at 262.89 83.4615 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-6"
-			(at 247.65 93.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/22039d.pdf"
-			(at 247.65 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "12-bit Digital-to-Analog Converter, integrated EEPROM, I2C interface, SOT-23-6"
-			(at 247.65 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "6"
-			(uuid "cb44e28b-3181-4412-881c-e5e3accee81a")
-		)
-		(pin "2"
-			(uuid "e87fc4fe-4797-4649-9434-3b0debd300ac")
-		)
-		(pin "1"
-			(uuid "196eaf58-c2a6-41f5-a2d9-8fa9fa93645d")
-		)
-		(pin "4"
-			(uuid "016a15e0-f2cb-41ba-88ca-5199c1a21bcf")
-		)
-		(pin "3"
-			(uuid "14b5c5c3-30b5-456b-a0ca-771a61bdc5e2")
-		)
-		(pin "5"
-			(uuid "9af7a24c-fb6a-4b6f-8f30-6f511b6b61e6")
-		)
-		(instances
-			(project ""
-				(path "/2b7a1a48-2553-49e3-90ba-0bcdb9a91407"
-					(reference "U6")
 					(unit 1)
 				)
 			)

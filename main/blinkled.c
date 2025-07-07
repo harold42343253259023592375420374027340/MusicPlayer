@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdbool.h>
 
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
@@ -25,7 +26,6 @@
 #define MAX_FILES 2048
 #define MAX_SONGS MAX_FILES
 
-
 #define PIN_NUM_CS   GPIO_NUM_10
 #define PIN_NUM_MOSI GPIO_NUM_11
 #define PIN_NUM_CLK  GPIO_NUM_12
@@ -36,26 +36,18 @@
 #define AUX GPIO_NUM_39
 #define VOLUME GPIO_NUM_21
 #define SCL GPIO_NUM_17
-#define SDA GPIO_NUM_18
-
-#define MCP4725_ADDR 0x60
-#define MCP4725_GENERAL_CALL_ADDR   0x00
-#define MCP4725_GENERAL_CALL_RESET  0x06
-#define MCP4725_GENERAL_CALL_WAKE   0x09
-
+#define SDA GPIO_NUM_1
 
 static int volume = 50;
 static const char* TAG = "Music Player";
 static int songLocation = 0;
-static uint8_t isPlaying = 0;
+static bool isPlaying = false;
 static FILINFO music_file_info;
 static FF_DIR music_dir;
 static FIL* music_ptr;
 static WAVHeader wav_header;
 static unsigned int bytes_read;
 static uint8_t audio_buffer[512];
-
-
 
 uint8_t play_music(void) {
     f_read(music_ptr, &wav_header.riff, sizeof(char[4]), &bytes_read); // check if RIFF
@@ -124,12 +116,10 @@ uint8_t play_music(void) {
         return 1;        
     }
 
-
     uint32_t audio_sample_rate = wav_header.sample_rate;
     uint32_t audio_data_size = wav_header.subchunk2_size;
     uint32_t total_samples = audio_data_size / (wav_header.bits_per_sample / 8);
     uint32_t bytes_to_read = audio_data_size;
-
 
     while (bytes_to_read > 0) {
         uint32_t bytes_read_this_time = (bytes_to_read > sizeof(audio_buffer)) ? sizeof(audio_buffer) : bytes_to_read;
@@ -137,7 +127,6 @@ uint8_t play_music(void) {
         f_read(music_ptr, audio_buffer, bytes_read_this_time, &bytes_read);
         
         for (uint32_t i = 0; i < bytes_read_this_time; i++) {
-
             vTaskDelay(pdMS_TO_TICKS(1000 / audio_sample_rate));
         }
         bytes_to_read -= bytes_read_this_time;
@@ -152,7 +141,6 @@ void up_button(void) {
     if (songLocation > 0) {
         songLocation--;
     }
-
 
     for (int i = 0; i <= songLocation; i++) {
         if (f_readdir(&music_dir, &music_file_info) != ESP_OK) {
@@ -222,27 +210,7 @@ void play_button_isr_handler(void* arg) {
     play_button();
 }
 
-
-
-void app_main(void)
-{
-    spi_bus_config_t bus_cfg = {
-        .mosi_io_num = PIN_NUM_MOSI,
-        .miso_io_num = PIN_NUM_MISO,
-        .sclk_io_num = PIN_NUM_CLK,
-        .quadwp_io_num = -1,
-        .quadhd_io_num = -1,
-        .max_transfer_sz = 4000,
-    };
-
-    sdmmc_host_t host = SDSPI_HOST_DEFAULT();
-    host.slot = SPI2_HOST; 
-
-    esp_err_t ret = spi_bus_initialize(host.slot, &bus_cfg, SDSPI_DEFAULT_DMA);
-    if (ret != ESP_OK) {
-        ESP_LOGE(TAG, "Failed to initialize SPI bus: %s", esp_err_to_name(ret));
-        return;
-    }
+void app_main(void) {
 
     sdspi_device_config_t slot_config = SDSPI_DEVICE_CONFIG_DEFAULT();
     slot_config.gpio_cs = PIN_NUM_CS;
